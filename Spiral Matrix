@@ -1,0 +1,26 @@
+def spiralOrder(matrix):
+    ret=[]
+    while matrix:
+        ret+=matrix.pop(0)
+        if matrix and matrix[0]:
+            for row in matrix:
+                ret.append(row.pop())
+        if matrix:
+            ret+=matrix.pop()[::-1]
+        if matrix and matrix[0]:
+            for row in matrix[::-1]:
+                ret.append(row.pop(0))
+    return ret
+
+rows=int(input("Enter numbers of rows\n"))
+cols=int(input("Enter numbers of cols\n"))
+print(f"Enter {rows} rows with {cols} columns space-seperated integers:")
+matrix=[]
+for _ in range(rows):
+    row=list(map(int,input().split()))
+    if len(row)!=cols:
+        print("Erroe:Each row must have exactly",cols,"numbers")
+        exit()
+    matrix.append(row)
+spiral=spiralOrder(matrix)
+print("Spiral order of the matrix is:",spiral)
