@@ -1,0 +1,27 @@
+def sortedSquares(nums):
+    if not nums:
+        return []
+    if nums[0] >= 0:
+        return [num * num for num in nums]
+    if nums[-1] <= 0:
+        return [num * num for num in reversed(nums)]
+    for i, n in enumerate(nums):
+        if n >= 0:
+            break
+    A = [num * num for num in reversed(nums[:i])]
+    B = [num * num for num in nums[i:]]            
+    ret = []
+    a = b = 0
+    while a < len(A) and b < len(B):
+        if A[a] < B[b]:
+            ret.append(A[a])
+            a += 1
+        else:
+            ret.append(B[b])
+            b += 1
+    ret.extend(A[a:])
+    ret.extend(B[b:])
+    return ret
+nums = list(map(int, input("Enter sorted numbers separated by space: ").split()))
+result = sortedSquares(nums)
+print("Sorted squares:", result)
