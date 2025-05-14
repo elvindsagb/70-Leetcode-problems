@@ -1,0 +1,7 @@
+def singleNumber(nums):
+    xor=0
+    for i in nums:
+        xor^=i
+    return xor
+nums=list(map(int,input("Enter numbers(every element twice except one):").split()))
+print("The single number is:",singleNumber(nums))
