@@ -1,0 +1,14 @@
+class NumArray(object):
+    def __init__(self,nums):
+        self.acc_nums=[0]
+        for num in nums:
+            self.acc_nums.append(self.acc_nums[-1]+num)
+    def sumRange(self,left,right):
+        return self.acc_nums[right+1]-self.acc_nums[left]
+nums=list(map(int,input("Enter array elements seperated by space:").split()))
+num_array=NumArray(nums)
+q=int(input("Enter number of queries:"))
+print("Now enter each query(left right):")
+for _ in range(q):
+    l,r=map(int,input().split())
+    print(f"Sum of elements from index {l} to {r}:",num_array.sumRange(l,r))
