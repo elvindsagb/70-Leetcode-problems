@@ -1,0 +1,18 @@
+def combine(n,k):
+    def backtrack(start,path):
+        if len(path)==k:
+            result.append(path[:])
+            return
+        for i in range(start,n+1):
+            path.append(i)
+            backtrack(i+1,path)
+            path.pop()
+    result=[]
+    backtrack(1,[])
+    return result
+n=int(input("Enter value of n(max number in range):"))
+k=int(input("Enter the value os k(combination size):"))
+combinations=combine(n,k)
+print(f"All {k}-combinations from numbers 1 to {n}:")
+for combo in combinations:
+    print(combo)
