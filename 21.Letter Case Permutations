@@ -1,0 +1,18 @@
+def letterCasePermutation(s):
+    output=[""]
+    for c in s:
+        temp=[]
+        if c.isalpha():
+            for item in output:
+                temp.append(item+c.lower())
+                temp.append(item+c.upper())
+        else:
+            for item in output:
+                temp.append(item+c)
+        output=temp
+    return output
+s=input("Enter a string(letters and digits):")
+result=letterCasePermutation(s)
+print("Letter case permutations:")
+for val in result:
+    print(val)
