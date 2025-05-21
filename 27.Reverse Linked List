@@ -1,0 +1,35 @@
+class ListNode:
+    def __init__(self,val=0,next=None):
+        self.val=val
+        self.next=next
+def reverseLinkedList(head):
+    prev=None
+    curr=head
+    while curr is not None:
+        next_pointer=curr.next
+        curr.next=prev
+        prev=curr
+        curr=next_pointer
+    return prev
+def create_linked_list(values):
+    if not values:
+        return None
+    head=ListNode(values[0])
+    curr=head
+    for val in values[1:]:
+        curr.next=ListNode(val)
+        curr=curr.next
+    return head
+def print_linked_list(head):
+    output=[]
+    while head:
+        output.append(head.val)
+        head=head.next
+    print(output)
+    
+
+values=list(map(int,input("Enter the values for the linked list seperated by space:").split()))
+head=create_linked_list(values)
+reversed_head=reverseLinkedList(head)
+print("ReversedLinked list:")
+print_linked_list(reversed_head)
