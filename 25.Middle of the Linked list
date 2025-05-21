@@ -1,0 +1,30 @@
+class ListNode:
+    def __init__(self,val=0,next=None):
+        self.val=val
+        self.next=next
+def middleNode(head):
+    slow=fast=head
+    while fast and fast.next:
+        slow=slow.next
+        fast=fast.next.next
+    return slow
+def create_linked_list(values):
+    if not values:
+        return None
+    head=ListNode(values[0])
+    curr=head
+    for val in values[1:]:
+        curr.next=ListNode(val)
+        curr=curr.next
+    return head
+def print_linked_list(head):
+    values=[]
+    while head:
+        values.append(head.val)
+        head=head.next
+    print(values)
+nums=list(map(int,input("Enter values for the linked list seperated by space:").split()))
+head=create_linked_list(nums)
+middle=middleNode(head)
+print("Linked list starting from the middle node:")
+print_linked_list(middle)
