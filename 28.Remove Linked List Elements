@@ -1,0 +1,36 @@
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+def removeElements(head, val):
+    dummy = ListNode(0)
+    dummy.next = head
+    curr = dummy
+    while curr and curr.next:
+        if curr.next.val == val:
+            curr.next = curr.next.next
+        else:
+            curr = curr.next
+
+    return dummy.next  
+def create_linked_list(values):
+    if not values:
+        return None
+    head = ListNode(values[0])
+    curr = head
+    for val in values[1:]:
+        curr.next = ListNode(val)
+        curr = curr.next
+    return head
+def print_linked_list(head):
+    result = []
+    while head:
+        result.append(head.val)
+        head = head.next
+    print(result)
+values = list(map(int, input("Enter linked list elements (space-separated): ").split()))
+val_to_remove = int(input("Enter the value to remove: "))
+head = create_linked_list(values)
+new_head = removeElements(head, val_to_remove)
+print("Linked list after removal:")
+print_linked_list(new_head)
