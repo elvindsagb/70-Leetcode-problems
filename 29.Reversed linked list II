@@ -1,0 +1,42 @@
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+def reverseBetween(head,left,right):
+    dummy_head=ListNode(-1)
+    dummy_head.next=head
+    left_prev,current_node=dummy_head,head
+    for _ in range(left-1):
+        left_prev=current_node
+        current_node=current_node.next
+    prev=None
+    for _ in range(right-left+1):
+        next_pointer=current_node.next
+        current_node.next=prev
+        prev=current_node
+        current_node=next_pointer
+    left_prev.next.next=current_node
+    left_prev.next=prev
+    return dummy_head.next
+def create_linked_list(values):
+    if not values:
+        return None
+    head=ListNode(values[0])
+    current=head
+    for val in values[1:]:
+        current.next=ListNode(val)
+        current=current.next
+    return head
+def print_linked_list(head):
+    output=[]
+    while head:
+        output.append(head.val)
+        head=head.next
+    print(output)
+values = list(map(int, input("Enter linked list elements (space-separated): ").split()))
+left=int(input("Enter left position:"))
+right=int(input("Enter right position:"))
+head = create_linked_list(values)
+new_head = reverseBetween(head,left,right)
+print("Linked list after reversing from position",left,"to",right,":")
+print_linked_list(new_head)
