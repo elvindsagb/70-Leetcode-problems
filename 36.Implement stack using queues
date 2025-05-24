@@ -1,0 +1,40 @@
+from collections import deque
+class Mystack:
+    def __init__(self):
+        self.queue=deque()
+    def push(self,x):
+        self.queue.append(x)
+        for _ in range(len(self.queue)-1):
+            self.queue.append(self.queue.popleft())
+    def pop(self):
+        if self.empty():
+            return "stack is empty"
+        return self.queue.popleft()
+    def top(self):
+        if self.empty():
+            return "stack is empty"
+        return self.queue[0]
+    def empty(self):
+        return len(self.queue)==0
+stack=Mystack()
+print("Available commands:push<val>,pop,top,empty,end")
+while True:
+    command=input("Enter command:").strip().lower()
+    if command=="end":
+        break
+    elif command.startswith("push"):
+        try:
+            _,val=command.split()
+            stack.push(int(val))
+            print(f"Pushed {val}")
+        except:
+            print("Invalid push command.Use:push<number>")
+    elif command=="pop":
+        print("Popped:",stack.pop())
+    elif command=="top":
+        print("Top element:",stack.top())
+    elif command=="empty":
+        print("Is empty?:",stack.empty())
+    else:
+        print("Invalid command")
+            
