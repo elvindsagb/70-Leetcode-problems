@@ -1,0 +1,14 @@
+def isValid(s):
+    stack=[]
+    hashmap={')':'(',']':'[','}':'{'}
+    for char in s:
+        if stack and char in hashmap and stack[-1]==hashmap[char]:
+            stack.pop()
+        else:
+            stack.append(char)
+    return not stack
+user_input=input("Enter a string of brackets to validate(e.g.,()[]{}):")
+if isValid(user_input):
+    print("The string is valid.")
+else:
+    print("The string is not valid")
