@@ -1,0 +1,11 @@
+def timeToBuyTickets(tickets,k):
+    result=0
+    for i in range(len(tickets)):
+        if i<=k:
+            result+=min(tickets[i],tickets[k])
+        else:
+            result+=min(tickets[i],tickets[k]-1)
+    return result
+tickets=list(map(int,input("Enter number of tickets each person wants (space-seperated):").split()))
+k=int(input("Enter the index of the person to track:"))
+print(f"Time taken for person at position {k} to finish buying tickets:",timeToBuyTickets(tickets,k))
