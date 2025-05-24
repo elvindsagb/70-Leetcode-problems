@@ -1,0 +1,40 @@
+class MinStack:
+    def __init__(self):
+        self.stack = []
+    def push(self, x):
+        if not self.stack:
+            current_min = x
+        else:
+            current_min = min(x, self.stack[-1][1]) 
+        self.stack.append((x, current_min))  
+    def pop(self):
+        if self.stack:
+            self.stack.pop()
+    def top(self):
+        if self.stack:
+            return self.stack[-1][0]  
+    def getMin(self):
+        if self.stack:
+            return self.stack[-1][1] 
+minstack = MinStack()
+print("Available operations: push <val>, pop, top, getMin, end")
+while True:
+    command = input("Enter command: ").strip().lower()
+    if command == "end":
+        break
+    elif command.startswith("push"):
+        try:
+            _, value = command.split()
+            minstack.push(int(value))
+            print(f"Pushed {value}")
+        except:
+            print("Invalid push command. Use: push <number>")
+    elif command == "pop":
+        minstack.pop()
+        print("Popped top value.")
+    elif command == "top":
+        print("Top element:", minstack.top())
+    elif command == "getmin":
+        print("Minimum element:", minstack.getMin())
+    else:
+        print("Invalid command.")
