@@ -9,3 +9,4 @@ def timeToBuyTickets(tickets,k):
 tickets=list(map(int,input("Enter number of tickets each person wants (space-seperated):").split()))
 k=int(input("Enter the index of the person to track:"))
 print(f"Time taken for person at position {k} to finish buying tickets:",timeToBuyTickets(tickets,k))
+//code change
