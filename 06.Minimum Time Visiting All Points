@@ -1,3 +1,4 @@
+//code 6
 def mTTAP(points):
     res=0
     x1,y1=points.pop(0)
