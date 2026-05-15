@@ -33,3 +33,4 @@ head=create_linked_list(values)
 reversed_head=reverseLinkedList(head)
 print("ReversedLinked list:")
 print_linked_list(reversed_head)
+//vcode
