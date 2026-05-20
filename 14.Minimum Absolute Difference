@@ -12,4 +12,3 @@ arr=list(map(int,input("Enter distinct integers seperated by spaces").split()))
 result=mAD(arr)
 print("Pairs with minimum absolute difference:",result)
 
-//code
