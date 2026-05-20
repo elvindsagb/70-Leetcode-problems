@@ -11,4 +11,4 @@ nums=list(map(int,input("Enter the numbers seperated by spaces\n").split()))
 k=int(input("Enter the value of k:"))
 result=cnd(nums,k)
 print("Contains nearby duplicate within distance k?:",result)
-//code
+//codetwo
