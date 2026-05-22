@@ -15,5 +15,5 @@ k=int(input("Enter the value os k(combination size):"))
 combinations=combine(n,k)
 print(f"All {k}-combinations from numbers 1 to {n}:")
 for combo in combinations:
-//combinations
     print(combo)
+//combinations
