@@ -1,4 +1,4 @@
-//officialcase
+//officialcaseoori
 def letterCasePermutation(s):
     output=[""]
     for c in s:
