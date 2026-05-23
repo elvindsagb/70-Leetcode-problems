@@ -8,3 +8,4 @@ def maxSubArray(nums):
 nums=list(map(int,input("Enter array elements seperated by space:").split()))
 result=maxSubArray(nums)
 print("Maximum subarray sum is:",result)
+//mainkadane
