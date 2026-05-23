@@ -10,4 +10,4 @@ coins=list(map(int,input("Enter coin denominations seperated by space:").split()
 amount = int(input("Enter target amount: "))
 result=coinChange(coins,amount)
 print("Fewest number of coins needed:",result)
-//Edited
+//Editedcoin
