@@ -9,3 +9,4 @@ def countBits(n):
 n=int(input("Enter a non-negative integer n:"))
 result=countBits(n)
 print("Number of 1s in binary representation from 0 to",n,":",result)
+//mainbit
