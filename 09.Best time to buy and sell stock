@@ -12,3 +12,4 @@ def maxProfit(prices):
     return maxP
 prices=list(map(int,input("Enter stock prices seperated by space:\n").split()))
 print("Maximum Profit:",maxProfit(prices))
+//best
