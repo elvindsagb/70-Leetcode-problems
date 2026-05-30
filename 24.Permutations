@@ -16,3 +16,4 @@ permutations=permute(nums)
 print("All possible permutations:")
 for p in permutations:
     print(p)
+//permutations
