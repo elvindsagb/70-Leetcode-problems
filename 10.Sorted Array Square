@@ -25,3 +25,4 @@ def sortedSquares(nums):
 nums = list(map(int, input("Enter sorted numbers separated by space: ").split()))
 result = sortedSquares(nums)
 print("Sorted squares:", result)
+//code
