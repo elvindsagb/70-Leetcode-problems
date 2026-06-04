@@ -9,4 +9,3 @@ def mTTAP(points):
     return res
 points=[[1,1],[3,4],[-1,0]]
 print("Minimum Time:",mTTAP(points))
-//points
