@@ -13,4 +13,4 @@ target=int(input("Enter target sum:\n"))
 nums=list(map(int,input("Enter array elements seperated by spaces:\n").split()))
 result=minSubArrayLen(target,nums)
 print("Minimum length of subarray with sum>=target is:",result)
-//unchanged
+
