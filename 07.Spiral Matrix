@@ -1,4 +1,4 @@
-
+//spiral
 def spiralOrder(matrix):
     ret=[]
     while matrix:
