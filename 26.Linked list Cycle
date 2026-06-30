@@ -31,4 +31,3 @@ head=create_linked_list_with_cycle(values,pos)
 solution=Solution()
 result=solution.hasCycle(head)
 print("Cycle Detected:" if result else "No Cycle detected")
-//commitnewofficial
