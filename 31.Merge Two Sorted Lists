@@ -37,4 +37,3 @@ list2=create_linked_list(values2)
 merged_head=mergeTwoLists(list1,list2)
 print("Merged linked list:")
 print_linked_list(merged_head)
-//coded
