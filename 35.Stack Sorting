@@ -9,5 +9,4 @@ def sortStack(stack):
 input_values=list(map(int,input("Enter the stack elements(space-seperated):").split()))
 sorted_stack=sortStack(input_values)
 print("Sorted stack in decending order(top to bottom):")
-print(sorted_stack[::-1])
-//Stacks
+print(sorted_stack[::-1]
