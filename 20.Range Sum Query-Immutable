@@ -12,3 +12,4 @@ print("Now enter each query(left right):")
 for _ in range(q):
     l,r=map(int,input().split())
     print(f"Sum of elements from index {l} to {r}:",num_array.sumRange(l,r))
+//code
