@@ -28,4 +28,4 @@ head=create_linked_list(nums)
 middle=middleNode(head)
 print("Linked list starting from the middle node:")
 print_linked_list(middle)
-//code
+
