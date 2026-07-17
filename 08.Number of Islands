@@ -1,4 +1,4 @@
-def numIslands(grid):
+1def numIslands(grid):
     if not grid:
         return 0
     def dfs(r, c):
