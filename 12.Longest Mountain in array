@@ -12,3 +12,4 @@ def longestMountain(arr):
     return ret
 arr=list(map(int,input("Enter array elements seperated by spaces:\n").split()))
 print("Length of longest mountain is:",longestMountain(arr))
+//
