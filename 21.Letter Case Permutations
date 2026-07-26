@@ -16,3 +16,4 @@ result=letterCasePermutation(s)
 print("Letter case permutations:")
 for val in result:
     print(val)
+//per
