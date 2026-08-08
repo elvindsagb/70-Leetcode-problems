@@ -12,4 +12,4 @@ k=int(input("Enter the value of k:"))
 result=cnd(nums,k)
 print("Contains nearby duplicate within distance k?:",result)
 
-//Edit
+
