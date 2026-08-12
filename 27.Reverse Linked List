@@ -25,8 +25,7 @@ def print_linked_list(head):
     while head:
         output.append(head.val)
         head=head.next
-    print(output)
-    
+    print(output)   
 
 values=list(map(int,input("Enter the values for the linked list seperated by space:").split()))
 head=create_linked_list(values)
