@@ -35,3 +35,4 @@ head = create_linked_list(values)
 new_head = removeElements(head, val_to_remove)
 print("Linked list after removal:")
 print_linked_list(new_head)
+//edit
